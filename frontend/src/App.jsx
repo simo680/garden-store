@@ -1,14 +1,28 @@
-import Footer from './components/Footer';
-// import Header from './components/Header'
-// import BasketPage from './pages/BasketPage';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import HomePage from "./pages/Homepage";
+import CategoriesPage from "./pages/CategoriesPage";
+import BasketPage from "./pages/BasketPage";
+import NotFoundPage from "./pages/NotFoundPage"
 import "./App.scss";
 
 function App() {
   return (
-    <div>
-      <Footer/>
+    <div className="App">
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<HomePage />}></Route>
+        <Route path="/categories/all" element={<CategoriesPage />}></Route>
+        {/* <Route path="/categories/:id" element={<} */}
+        <Route path="/basket" element={<BasketPage />}></Route>
+        <Route path="*" element={<NotFoundPage/>}></Route>
+      </Routes>
+      <Footer />
+    </BrowserRouter>
     </div>
-  )
+  );
 }
 
 export default App;

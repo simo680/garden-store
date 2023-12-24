@@ -2,7 +2,7 @@
 function CategoriesPage() {
     return (
         <div>
-            123
+            <h2>Categories</h2>
         </div>
     )
 }

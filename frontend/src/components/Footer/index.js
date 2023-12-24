@@ -1,3 +1,4 @@
+import Map from "../Map";
 import s from "./Footer.module.scss";
 import { ReactComponent as InstagramSvg } from "./Media/ic-instagram.svg";
 import { ReactComponent as WhatsappSvg } from "./Media/ic-whatsapp.svg";
@@ -28,7 +29,7 @@ function Footer() {
           <h3>24 hours a day</h3>
         </div>
       </div>
-      {/* <Map /> */}
+      <Map/>
       </div>
     </footer>
   );
