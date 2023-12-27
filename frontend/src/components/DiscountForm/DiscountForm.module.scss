@@ -1,7 +1,7 @@
 .discountForm {
-  margin: 40px;
+  margin: 30px;
   border-radius: 12px;
-  padding: 32px 32px 0 32px;
+  padding: 32px 32px;
   gap: 24px;
   background: linear-gradient(261.47deg, #0b710b 32.63%, #339933 98.96%);
   color: var(--white);
@@ -10,7 +10,7 @@
   align-items: center;
 
   h2 {
-    margin: 15px 0 0;
+    margin: 15px 0 0 0;
   }
 }
 
@@ -19,6 +19,16 @@
   background-repeat: no-repeat;
   width: 748px;
   height: 360px;
+}
+
+.errortext {
+  color: white;
+  margin: 0 15px 0 0;
+  font-size: 15px;
+  align-self: flex-end;
+  text-align: right;
+  transform: translate(0, -5px);
+  text-decoration: underline;
 }
 
 .form {
@@ -40,15 +50,12 @@
     border: 1px solid rgba(255, 255, 255, 1);
     border-radius: 6px;
     background-color: transparent;
-    
+
     &::placeholder {
       color: var(--white);
-      margin-left: 15px;
     }
   }
 }
-
-
 
 .group {
   display: flex;

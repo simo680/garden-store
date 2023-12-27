@@ -9,7 +9,7 @@ import BasketPage from "./pages/BasketPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import "./App.scss";
 
-export const BASE_URL = "http://localhost:3333";
+
 
 function App() {
   return (
@@ -18,8 +18,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
-          <Route path="/categories/all" element={<CategoriesPage />}></Route>
-          {/* <Route path="/categories/:id" element={<} */}
+          <Route path="/categories/all" element={<CategoriesPage/>}></Route>
+          <Route path="/categories/:id" element={<App/>}></Route>
           <Route path="/products" element={<ProductsPage />}></Route>
           <Route path="/products/sales"></Route>
           <Route path="/products/:id" element={<ProductItemPage />}></Route>

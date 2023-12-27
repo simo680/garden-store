@@ -30,7 +30,7 @@ function DiscountForm() {
   };
 
   let inputPhone = {
-    ...register("phone", {
+    ...register("Phone", {
       required: "Phone number required",
       pattern: {
         value: /^(\+7|8)\s?\(?(\d{3})\)?\s?\d{3}[- ]?\d{2}[- ]?\d{2}$/,
@@ -40,7 +40,7 @@ function DiscountForm() {
   };
 
   let inputEmail = {
-    ...register("email", {
+    ...register("Email", {
       required: "Email Required",
       pattern: {
         value:
