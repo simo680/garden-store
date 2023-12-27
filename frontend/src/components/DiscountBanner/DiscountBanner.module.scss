@@ -1,0 +1,15 @@
+.banner {
+  background-image: url("./Media/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: auto;
+  height: 600px;
+  .bannerContent {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 40px;
+    width: 1000px;
+  }
+}

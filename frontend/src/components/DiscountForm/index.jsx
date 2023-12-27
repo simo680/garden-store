@@ -1,9 +1,9 @@
-import s from './DiscountForm.module.scss'
-
+import s from "./DiscountForm.module.scss";
 import { useForm } from "react-hook-form";
+import Button from "../../UI/Button";
 
 function DiscountForm() {
-  const {
+  let {
     register,
     handleSubmit,
     formState: { errors },
@@ -51,7 +51,33 @@ function DiscountForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmitLocal)}></form>
+    <div className={s.discountForm}>
+      <h2>5% off on the first order</h2>
+      <div className={s.group}>
+        <div className={s.hands}></div>
+        <form onSubmit={handleSubmit(onSubmit)} className={s.form}>
+          <input {...inputName} type="text" placeholder="Name" />
+          {errors.Name && (
+            <p className={`${s.errortext}`}>{errors.Name.message}</p>
+          )}
+          <input {...inputPhone} type="number" placeholder="Phone Number" />
+          {errors.Phone && (
+            <p className={`${s.errortext}`}>{errors.Phone.message}</p>
+          )}
+          <input {...inputEmail} type="text" placeholder="Email" />
+          {errors.Email && (
+            <p className={`${s.errortext}`}>{errors.Email.message}</p>
+          )}
+          <Button
+            onClick={() => handleSubmit(onSubmit)}
+            type="submit"
+            size="big"
+            color="white"
+            title="Get a discount"
+          />
+        </form>
+      </div>
+    </div>
   );
 }
 

@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import s from "./NotFoundPage.module.scss";
+import error from "./Media/404.png";
+
 
 function NotFoundPage() {
   const navigate = useNavigate();
@@ -7,7 +9,7 @@ function NotFoundPage() {
   return (
     <div className={s.notFoundPage}>
       <div>
-        <img src="./Media/404.png" alt="404" />
+        <img src={error} alt="404" />
       </div>
       <h2>Page Not Found</h2>
       <p>

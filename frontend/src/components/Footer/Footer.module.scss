@@ -3,13 +3,6 @@ footer {
   padding: 0px 40px 80px 40px;
   flex-direction: column;
   gap: 40px;
-
-  h2 {
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 110%;
-  }
 }
 
 .socials {
@@ -21,28 +14,21 @@ footer {
 
 .info {
   display: grid;
-  grid-template-columns: 1200px 548px;
+  grid-template-columns: 1240px 548px;
   gap: 32px;
 }
 
 .infoItem {
   padding: 32px;
   border-radius: 12px;
-  background: #f1f3f4;
+  background: var(--light-grey);
 
   span {
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: 130%;
-    color: #8b8b8b;
-  }
-
-  h3 {
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 110%;
+    color: var(--grey);
   }
 }
 

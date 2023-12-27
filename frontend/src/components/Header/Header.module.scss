@@ -1,0 +1,24 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 28px 40px 28px 40px;
+
+  .redirects {
+    display: flex;
+    gap: 32px;
+  }
+  .redirect {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+
+    &:hover {
+      color: var(--green);
+      transition: color 0.3s;
+    }
+  }
+}
