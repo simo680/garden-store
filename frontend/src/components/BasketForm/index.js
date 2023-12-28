@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Button from "../../UI/Button";
-import s from './BasketForm.module.scss'
-
+import s from "./BasketForm.module.scss";
 
 function BasketForm() {
   const [formData, setFormData] = useState({
@@ -55,9 +54,9 @@ function BasketForm() {
           placeholder="Email"
           className={s.inputField}
         />
-        <Button title={'Order'}/>
+        <Button title={"Order"} />
       </form>
-    </div>  
+    </div>
   );
 }
 

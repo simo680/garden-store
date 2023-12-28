@@ -26,7 +26,6 @@ function Categories({ length }) {
             className={s.category}
             key={elem.id}
             to={"/categories/" + elem.id}
-          
           >
             <div>
               <div

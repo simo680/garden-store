@@ -1,12 +1,10 @@
 import { useNavigate, Link } from "react-router-dom";
 import { ReactComponent as Logo } from "./Media/logo.svg";
-import {ReactComponent as Basket } from './Media/basket.svg'
+import { ReactComponent as Basket } from "./Media/basket.svg";
 import s from "./Header.module.scss";
 
 function Header() {
-
   const navigate = useNavigate();
-
 
   return (
     <header>
@@ -27,9 +25,9 @@ function Header() {
         </Link>
       </nav>
 
-      <div className={s.basket} onClick={() => navigate('/basket')}>
-            <Basket/>
-          </div>
+      <div className={s.basket} onClick={() => navigate("/basket")}>
+        <Basket />
+      </div>
     </header>
   );
 }
