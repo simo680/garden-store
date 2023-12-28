@@ -7,9 +7,7 @@ import ProductsPage from "./pages/ProductsPage";
 import ProductItemPage from "./pages/ProductItemPage";
 import BasketPage from "./pages/BasketPage";
 import NotFoundPage from "./pages/NotFoundPage";
-import "./App.scss";
-
-
+import "./App.scss";  
 
 function App() {
   return (
@@ -18,9 +16,9 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
-          <Route path="/categories/all" element={<CategoriesPage/>}></Route>
-          <Route path="/categories/:id" element={<App/>}></Route>
-          <Route path="/products" element={<ProductsPage />}></Route>
+          <Route path="/categories/all" element={<CategoriesPage />}></Route>
+          <Route path="/categories/:id" ></Route>
+          <Route path="/products" element={<ProductsPage/>}></Route>
           <Route path="/products/sales"></Route>
           <Route path="/products/:id" element={<ProductItemPage />}></Route>
           <Route path="/basket" element={<BasketPage />}></Route>

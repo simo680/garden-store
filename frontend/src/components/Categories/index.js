@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchCategoriesList } from "../../asyncActions/categories";
 import { Link } from "react-router-dom";
-import CategoriesItem from "../CategoriesItem";
 
-function Categories() {
+import { BASE_URL } from "../..";
+function Categories({ length }) {
   const categories = useSelector((store) => store.categories);
   const dispatch = useDispatch();
 
@@ -14,23 +14,33 @@ function Categories() {
       console.log("Fetching categories...");
       dispatch(fetchCategoriesList());
     }
-  }, [dispatch]);
+  }, [categories, dispatch]);
+
+  console.log("Categories in component:", categories);
 
   return (
-    <ul className={s.items}>
-      {categories.map((elem) => (
-        <Link key={elem.id} to={"/category/" + elem.id}>
-          <CategoriesItem
-            img={elem.image}
-            name={elem.title}
-            id={elem.id}
-            count={categories.length}
-          />
-        </Link>
-      ))}
-    </ul>
+    <div className={s.categories}>
+      <div className={s.category_list}>
+        {categories.slice(0, length).map((elem) => (
+          <Link
+            className={s.category}
+            key={elem.id}
+            to={"/categories/" + elem.id}
+          
+          >
+            <div>
+              <div
+                style={{
+                  background: `url(${BASE_URL}${elem.image}) no-repeat center center / cover`,
+                }}
+                className={s.category_image}
+              ></div>
+              <p className={s.category_name}>{elem.title}</p>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </div>
   );
 }
-
-
 export default Categories;

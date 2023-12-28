@@ -1,0 +1,30 @@
+.btnall {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 40px 0px 40px;
+}
+
+.btnAndline {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  a {
+    color: var(--grey);
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 126%;
+    border: 1px solid rgba(221, 221, 221, 1);
+    border-radius: 6px;
+    padding: 16px 8px;
+  }
+}
+
+.line {
+  width: 1300px;
+  height: 1px;
+  background-color: var(--grey);
+}

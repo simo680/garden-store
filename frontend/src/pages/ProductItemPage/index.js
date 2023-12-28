@@ -4,7 +4,7 @@
 function ProductItemPage() {
     return (
         <div>
-            123
+           123
         </div>
     )
 }
