@@ -1,6 +1,6 @@
-const defaultState = []
+const defaultState = [];
 
-const GET_ALL_CATEGORIES = 'GET_ALL_CATEGORIES';
+const GET_ALL_CATEGORIES = "GET_ALL_CATEGORIES";
 
 export const categoriesReducer = (state = defaultState, action) => {
   switch (action.type) {
@@ -9,6 +9,9 @@ export const categoriesReducer = (state = defaultState, action) => {
     default:
       return state;
   }
-}
+};
 
-export const getAllCategoriesAction = (payload) => ({ type: GET_ALL_CATEGORIES, payload });
+export const getAllCategoriesAction = (payload) => ({
+  type: GET_ALL_CATEGORIES,
+  payload,
+});

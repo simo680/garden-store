@@ -18,9 +18,10 @@ function App() {
           <Route path="/" element={<HomePage />}></Route>
           <Route path="/categories/all" element={<CategoriesPage />}></Route>
           <Route path="/categories/:id" ></Route>
-          <Route path="/products" element={<ProductsPage/>}></Route>
+          <Route path="/products" ></Route>
+          <Route path="/products/all" element={<ProductsPage/>}></Route>
           <Route path="/products/sales"></Route>
-          <Route path="/products/:id" element={<ProductItemPage />}></Route>
+          <Route path="/products/:id" element={<ProductItemPage  type={'all'} title={'All Products'}/>}></Route>
           <Route path="/basket" element={<BasketPage />}></Route>
           <Route path="*" element={<NotFoundPage />}></Route>
         </Routes>
