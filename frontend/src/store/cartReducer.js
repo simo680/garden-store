@@ -1,7 +1,5 @@
 const defaultState = []
 
-
-
 const ADD_NEW_ITEM = 'ADD_NEW_ITEM'
 const CHANGE_COUNT = 'CHANGE_COUNT'
 
