@@ -1,0 +1,60 @@
+/* ====== CSS Reset без универсального селектора ====== */
+
+/* Базовые элементы */
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+p,
+a,
+address,
+img,
+ul,
+li,
+form,
+label,
+footer,
+header,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+footer,
+header,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1.5;
+}
+ol,
+ul {
+  list-style: none;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  margin: 0;
+  border: none;
+  background: none;
+}
