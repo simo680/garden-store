@@ -10,15 +10,19 @@ const Footer = () => (
     <h2 className={s.title}>Contact</h2>
     <div className={s.cards}>
       <FooterCard title="Phone">
-        <a className={s.tel} href="tel:+7(499)350‑66-04">
+        <a className={s.tel} href="tel:+7(499)350‑66-04" target="_blank">
           +7(499)350‑66-04
         </a>
       </FooterCard>
 
       <FooterCard title="Socials">
         <div className={s.icons}>
-          <Whatsapp className={s.icon} />
-          <Instagram className={s.icon} />
+          <a href="https://wa.me/74993506604" target="_blank">
+            <Whatsapp className={s.icon} />
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <Instagram className={s.icon} />
+          </a>
         </div>
       </FooterCard>
 
