@@ -1,0 +1,51 @@
+@use "./variables" as *;
+@use "./fonts";
+@use "./global";
+
+body {
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 20px 20px 80px;
+
+  color: $text-primary;
+  font-family: "Montserrat", sans-serif;
+}
+
+main {
+  flex-grow: 1;
+}
+
+h1 {
+  color: $title-secondary;
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 110.01%;
+}
+
+h2 {
+  color: $title-primary;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 110.01%;
+}
+
+h3 {
+  color: $title-primary;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 130%;
+}
+
+p {
+  color: $text-primary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+}
+
+a {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 130%;
+}

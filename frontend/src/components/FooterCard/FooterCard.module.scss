@@ -1,0 +1,18 @@
+@use "../../styles/variables" as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 194px;
+  padding: 32px;
+  border-radius: 16px;
+  background-color: #f1f3f4;
+}
+
+.title {
+  color: $text-secondary;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 130%;
+}
