@@ -1,20 +1,31 @@
-$background-default: #ffffff;
-$background-button: #339933;
-$background-button-hover: #282828;
-$background-button-active: #ffffff;
+$color-apple: #339933;
+$color-mine-shaft: #282828;
+$color-white: #ffffff;
+$color-alto: #dddddd;
+$color-gray: #8b8b8b;
+$color-porcelain: #f1f3f4;
 
-$border-default: #dddddd;
+$bg-primary: $color-white;
+$bg-button-primary: $color-apple;
+$bg-button-secondary: $color-white;
+$bg-button-hover: $color-mine-shaft;
+$bg-button-active: $color-white;
+$bg-button-secondary-hover: $color-mine-shaft;
+$bg-button-secondary-active: $color-porcelain;
 
-$title-primary: #282828;
-$title-secondary: #ffffff;
+$text-button-primary: $color-white;
+$text-button-hover: $color-white;
+$text-button-active: $color-mine-shaft;
 
-$text-primary: #282828;
-$text-secondary: #8b8b8b;
-$text-link-hover: #339933;
+$text-button-secondary: $color-mine-shaft;
+$text-button-secondary-hover: $color-white;
+$text-button-secondary-active: $color-apple;
 
-$text-button-default: #ffffff;
-$text-button-hover: #ffffff;
-$text-button-active: #339933;
+$border-color: $color-alto;
 
-$banner-button-default: #282828;
-$banner-button-active: #339933;
+$title-heading: $color-mine-shaft;
+$title-on-dark: $color-white;
+$text-body: $color-mine-shaft;
+$text-muted: $color-gray;
+
+$text-link-hover: $color-apple;

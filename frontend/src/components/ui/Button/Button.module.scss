@@ -1,0 +1,50 @@
+@use "../../../styles/variables" as *;
+
+.button {
+  padding: 16px 32px;
+  border-radius: 8px;
+
+  font-weight: 600;
+  font-size: 20px;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.primary {
+  color: $text-button-primary;
+  background-color: $bg-button-primary;
+
+  &:not(.disabled):hover {
+    color: $text-button-hover;
+    background-color: $bg-button-hover;
+  }
+
+  &.active {
+    color: $text-button-active;
+    background-color: $bg-button-active;
+  }
+}
+
+.secondary {
+  color: $text-button-secondary;
+  background-color: $bg-button-secondary;
+
+  &:not(.disabled):hover {
+    color: $text-button-secondary-hover;
+    background-color: $bg-button-secondary-hover;
+  }
+
+  &.active {
+    color: $text-button-secondary-active;
+    background-color: $bg-button-secondary-active;
+  }
+}
