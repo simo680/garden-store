@@ -12,6 +12,7 @@ import ProductPage from "./pages/ProductPage/ProductPage.tsx";
 import CategoryPage from "./pages/CategoryPage/CategoryPage.tsx";
 import ProductsPage from "./pages/ProductsPage/ProductsPage.tsx";
 import "./styles/index.scss";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
       { path: "products/:id", element: <ProductPage /> },
       { path: "sales", element: <ProductsPage /> },
       { path: "basket", element: <BasketPage /> },
+      { path: "*", element: <NotFoundPage /> },
     ],
   },
 ]);
