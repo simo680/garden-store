@@ -5,7 +5,7 @@ import type { ButtonProps } from "./type";
 import s from "./Button.module.scss";
 
 const Button = ({
-  fullWidth = true,
+  fullWidth = false,
   appearance = "primary",
   ref,
   type = "button",

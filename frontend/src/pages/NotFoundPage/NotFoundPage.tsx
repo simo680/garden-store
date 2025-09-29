@@ -21,11 +21,7 @@ const NotFoundPage = () => {
           to the homepage.
         </p>
       </div>
-      <Button
-        className={s.button}
-        fullWidth={false}
-        onClick={() => navigate("/")}
-      >
+      <Button className={s.button} onClick={() => navigate("/")}>
         <a className={s.link}>Go home</a>
       </Button>
     </div>
