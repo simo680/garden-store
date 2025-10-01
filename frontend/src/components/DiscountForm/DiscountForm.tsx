@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 import { discountSchema, type DiscountFormData } from "./schema";
-import { sendDiscountForm } from "../../api/discount";
+import { postDiscountForm } from "../../api/discount";
 import Button from "../ui/Button/Button";
 import Input from "../ui/Input/Input";
 
@@ -15,10 +15,10 @@ const DiscountForm = () => {
 
   const onSubmit = async (data: DiscountFormData) => {
     try {
-      await sendDiscountForm(data);
-      console.log("Form submitted successfully!");
+      await postDiscountForm(data);
+      console.log("Discount form submitted successfully!");
     } catch (error) {
-      console.error("Error:", error);
+      alert("Error submitting discount form");
     }
   };
 
