@@ -1,0 +1,30 @@
+@use "../../styles/variables" as *;
+
+.title {
+  margin-bottom: 24px;
+}
+
+.title,
+.itemCount,
+.totalTitle {
+  font-size: 40px;
+  line-height: 130%;
+}
+
+.itemCount,
+.totalTitle {
+  color: $text-muted;
+}
+
+.totalAmount {
+  align-content:flex-start;
+
+  font-weight: 700;
+  font-size: 64px;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}

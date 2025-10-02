@@ -1,23 +1,23 @@
 import { apiRequest } from "./client";
 
-export type Product = {
+export type TProduct = {
   id: number;
   title: string;
   price: number;
+  discont_price: number;
   description: string;
-  category: string;
   image: string;
-  
 };
 
+
 export async function getAllProducts() {
-  return apiRequest<Product[]>("http://localhost:3333/products/all", {
+  return apiRequest<TProduct[]>("http://localhost:3333/products/all", {
     method: "GET",
   });
 }
 
 export async function getProductById(id: number) {
-  return apiRequest<Product>(`http://localhost:3333/products/${id}`, {
+  return apiRequest<TProduct>(`http://localhost:3333/products/${id}`, {
     method: "GET",
   });
 }

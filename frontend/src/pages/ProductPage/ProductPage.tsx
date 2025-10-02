@@ -1,9 +1,7 @@
-
+import PageWrapper from "../../components/PageWrapper/PageWrapper";
 
 const ProductPage = () => {
-  return (
-    <div>ProductPage</div>
-  )
-}
+  return <PageWrapper>ProductPage</PageWrapper>;
+};
 
-export default ProductPage
+export default ProductPage;

@@ -1,6 +1,8 @@
+import PageWrapper from "../../components/PageWrapper/PageWrapper"
+
 const CategoriesPage = () => {
   return (
-    <div>CategoriesPage</div>
+    <PageWrapper>CategoriesPage</PageWrapper>
   )
 }
 
