@@ -1,0 +1,21 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 424px;
+  max-height: 236px;
+}
+
+.title,
+.text {
+  color: #fff;
+  font-weight: 600;
+}
+
+.title {
+  font-size: 40px;
+}
+
+.text {
+  font-size: 20px;
+}
