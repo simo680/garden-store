@@ -1,4 +1,3 @@
-// api/client.ts
 export async function apiRequest<T>(
   url: string,
   options?: RequestInit

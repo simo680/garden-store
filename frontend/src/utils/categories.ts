@@ -1,14 +1,5 @@
 import { apiRequest } from "./client";
-
-export type GetCategoriesPayload = {
-  categories: string[];
-};
-
-export type Category = {
-  id: number;
-  title: string;
-  img: string;
-};
+import type { GetCategoriesPayload, TCategoryWithProducts } from "./types";
 
 export async function getCategories() {
   return apiRequest<GetCategoriesPayload>(
@@ -20,7 +11,7 @@ export async function getCategories() {
 }
 
 export async function getCategoryById(id: number) {
-  return apiRequest<Category>(`http://localhost:3333/categories/${id}`, {
+  return apiRequest<TCategoryWithProducts>(`http://localhost:3333/categories/${id}`, {
     method: "GET",
   });
 }

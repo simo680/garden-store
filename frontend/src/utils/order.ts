@@ -1,10 +1,5 @@
 import { apiRequest } from "./client";
-
-export type OrderFormPayload = {
-  name: string;
-  phone: string;
-  email: string;
-};
+import type { OrderFormPayload } from "./types";
 
 export async function postOrder(data: OrderFormPayload) {
   return apiRequest<{ success: boolean }>("http://localhost:3333/sale/send", {

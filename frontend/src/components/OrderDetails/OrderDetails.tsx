@@ -1,4 +1,4 @@
-import { postOrder } from "../../api/order";
+import { postOrder } from "../../utils/order";
 import ContactForm from "../ContactForm/ContactForm";
 import OrderSummary from "../OrderSummary/OrderSummary";
 

@@ -1,4 +1,4 @@
-import { postDiscountForm } from "../../api/discount";
+import { postDiscountForm } from "../../utils/discount";
 import ContactForm from "../ContactForm/ContactForm";
 
 import s from "./DiscountBanner.module.scss";

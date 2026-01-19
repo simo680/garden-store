@@ -1,10 +1,5 @@
 import { apiRequest } from "./client";
-
-export type DiscountFormPayload = {
-  name: string;
-  phone: string;
-  email: string;
-};
+import type { DiscountFormPayload } from "./types";
 
 export async function postDiscountForm(data: DiscountFormPayload) {
   return apiRequest<{ success: boolean }>("http://localhost:3333/sale/send", {

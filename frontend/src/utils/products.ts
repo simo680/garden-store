@@ -1,16 +1,7 @@
 import { apiRequest } from "./client";
+import type { TProduct } from "./types";
 
-export type TProduct = {
-  id: number;
-  title: string;
-  price: number;
-  discont_price: number;
-  description: string;
-  image: string;
-};
-
-
-export async function getAllProducts() {
+export async function fetchAllProducts() {
   return apiRequest<TProduct[]>("http://localhost:3333/products/all", {
     method: "GET",
   });
