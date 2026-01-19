@@ -1,13 +1,10 @@
-import { apiRequest, BASE_URL } from './apiRequest';
+import { apiRequest, BASE_URL } from "./apiRequest";
+import type { OrderFormPayload } from "./types";
 
-export type OrderFormPayload = {
-  name: string;
-  phone: string;
-  email: string;
-};
-
-export const postOrder = async (data: OrderFormPayload) =>
-  await apiRequest<{ success: boolean }>(`${BASE_URL}/sale/send`, {
-    method: 'POST',
+export async function postOrder(data: OrderFormPayload) {
+  return apiRequest<{ success: boolean }>(`${BASE_URL}/sale/send`, {
+    method: "POST",
     body: JSON.stringify(data),
   });
+}
+

@@ -1,6 +1,10 @@
-
 import { apiRequest, BASE_URL } from './apiRequest';
-import type { DiscountFormPayload } from "./types";
+
+export type DiscountFormPayload = {
+  name: string;
+  phone: string;
+  email: string;
+};
 
 export const postDiscountForm = async (data: DiscountFormPayload) =>
   await apiRequest<{ success: boolean }>(`${BASE_URL}/sale/send`, {
