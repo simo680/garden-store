@@ -1,4 +1,4 @@
-@use "../../styles/variables" as *;
+@use '../../styles/variables' as *;
 
 .card {
   display: flex;
@@ -6,8 +6,8 @@
   gap: 16px;
   max-height: 194px;
   padding: 32px;
-  border-radius: 16px;
   background-color: #f1f3f4;
+  border-radius: 16px;
 }
 
 .title {

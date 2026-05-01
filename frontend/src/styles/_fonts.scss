@@ -5,13 +5,28 @@
   $font-style: normal
 ) {
   @font-face {
-    font-family: $font-name;
-    src: url("#{$font-path}.ttf") format("truetype");
     font-weight: $font-weight;
+    font-family: $font-name;
     font-style: $font-style;
+    src: url('#{$font-path}.ttf') format('truetype');
   }
 }
 
-@include font-face("Montserrat", "../assets/fonts/Montserrat-Regular", 400, "normal");
-@include font-face("Montserrat", "../assets/fonts/Montserrat-Medium", 500, "medium");
-@include font-face("Montserrat", "../assets/fonts/Montserrat-SemiBold", 600, "bold");
+@include font-face(
+  'Montserrat',
+  '../assets/fonts/Montserrat-Regular',
+  400,
+  'normal'
+);
+@include font-face(
+  'Montserrat',
+  '../assets/fonts/Montserrat-Medium',
+  500,
+  'medium'
+);
+@include font-face(
+  'Montserrat',
+  '../assets/fonts/Montserrat-SemiBold',
+  600,
+  'bold'
+);

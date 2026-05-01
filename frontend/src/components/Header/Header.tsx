@@ -1,23 +1,23 @@
-import { Link, NavLink } from "react-router";
+import { Link, NavLink } from 'react-router';
 
-import Logo from "./images/logo.svg";
-import BasketIcon from "./images/basket.svg";
+import Logo from './images/logo.svg';
+import BasketIcon from './images/basket.svg';
 
-import s from "./Header.module.scss";
-import clsx from "clsx";
+import s from './Header.module.scss';
+import clsx from 'clsx';
 
 const Header = () => {
   const navLinks = [
-    { name: "Main Page", path: "/" },
-    { name: "Categories", path: "/categories" },
-    { name: "All Products", path: "/products" },
-    { name: "All Sales", path: "/sales" },
+    { name: 'Main Page', path: '/' },
+    { name: 'Categories', path: '/categories' },
+    { name: 'All Products', path: '/products' },
+    { name: 'All Sales', path: '/sales' },
   ];
 
   return (
     <header className={s.header}>
       <div className={s.logo}>
-        <Link className={s.link} to={"/"}>
+        <Link className={s.link} to={'/'}>
           <Logo className={s.logo} />
         </Link>
       </div>
@@ -40,7 +40,7 @@ const Header = () => {
         </ul>
       </nav>
       <div className={s.basket}>
-        <Link className={s.link} to={"/basket"}>
+        <Link className={s.link} to={'/basket'}>
           <BasketIcon className={s.basketIcon} />
         </Link>
       </div>

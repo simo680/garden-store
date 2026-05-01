@@ -1,19 +1,19 @@
-import { postOrder } from "../../api/order";
-import ContactForm from "../ContactForm/ContactForm";
-import OrderSummary from "../OrderSummary/OrderSummary";
+import { postOrder } from '../../api/order';
+import ContactForm from '../ContactForm/ContactForm';
+import OrderSummary from '../OrderSummary/OrderSummary';
 
-import s from "./OrderDetails.module.scss";
+import s from './OrderDetails.module.scss';
 
 const OrderDetails = () => {
   return (
     <div className={s.container}>
       <OrderSummary />
       <ContactForm
-        appearance="primary"
+        appearance='primary'
         fetch={async (data) => {
           await postOrder(data);
         }}
-        buttonTitle="Order"
+        buttonTitle='Order'
       />
     </div>
   );

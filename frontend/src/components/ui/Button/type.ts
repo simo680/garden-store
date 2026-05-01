@@ -1,9 +1,9 @@
-import type { ButtonHTMLAttributes, Ref } from "react";
-import { type ReactNode } from "react";
+import type { ButtonHTMLAttributes, Ref } from 'react';
+import { type ReactNode } from 'react';
 
-type Appearance = "primary" | "secondary" ;
+type Appearance = 'primary' | 'secondary';
 
-type ButtonType = "button" | "submit" | "reset";
+type ButtonType = 'button' | 'submit' | 'reset';
 
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   appearance?: Appearance;

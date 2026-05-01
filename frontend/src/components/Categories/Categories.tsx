@@ -1,14 +1,14 @@
-import LineButton from "../ui/LineButton/LineButton";
+import LineButton from '../ui/LineButton/LineButton';
 
-import s from "./Categories.module.scss";
+import s from './Categories.module.scss';
 
 const Categories = () => {
   return (
     <div className={s.categories}>
       <LineButton
-        title="Categories"
-        titleButton="All Categories"
-        path="/categories"
+        title='Categories'
+        titleButton='All Categories'
+        path='/categories'
       />
       {/* <ul className={s.list}>
           <li key={category.id}>

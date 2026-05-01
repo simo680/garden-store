@@ -1,16 +1,15 @@
-@use "../../../styles/variables" as *;
+@use '../../../styles/variables' as *;
 
 .input {
   padding: 16px 32px;
   border-radius: 8px;
-
   transition: all 0.3s ease;
 }
 
 .primary {
-  border: 1px solid $border-primary;
   color: $text-muted;
   background-color: $bg-primary;
+  border: 1px solid $border-primary;
 
   &::placeholder {
     color: $text-muted;
@@ -18,9 +17,9 @@
 }
 
 .secondary {
-  border: 1px solid $border-secondary;
   color: $color-white;
   background-color: transparent;
+  border: 1px solid $border-secondary;
 
   &::placeholder {
     color: $color-white;

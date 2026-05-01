@@ -1,4 +1,4 @@
-@use "../../styles/variables" as *;
+@use '../../styles/variables' as *;
 
 .title {
   margin-bottom: 24px;
@@ -17,8 +17,7 @@
 }
 
 .totalAmount {
-  align-content:flex-start;
-
+  align-content: flex-start;
   font-weight: 700;
   font-size: 64px;
 }

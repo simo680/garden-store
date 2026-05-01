@@ -1,4 +1,4 @@
-import { apiRequest } from "./client";
+import { apiRequest, BASE_URL } from './apiRequest';
 
 export type GetCategoriesPayload = {
   categories: string[];
@@ -10,17 +10,12 @@ export type Category = {
   img: string;
 };
 
-export async function getCategories() {
-  return apiRequest<GetCategoriesPayload>(
-    "http://localhost:3333/categories/all",
-    {
-      method: "GET",
-    }
-  );
-}
-
-export async function getCategoryById(id: number) {
-  return apiRequest<Category>(`http://localhost:3333/categories/${id}`, {
-    method: "GET",
+export const getCategories = () =>
+  apiRequest<GetCategoriesPayload>('http://localhost:3333/categories/all', {
+    method: 'GET',
   });
-}
+
+export const getCategoryById = async (id: number) =>
+  await apiRequest<Category>(`${BASE_URL}/categories/${id}`, {
+    method: 'GET',
+  });

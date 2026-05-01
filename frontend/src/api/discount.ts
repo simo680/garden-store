@@ -1,4 +1,4 @@
-import { apiRequest } from "./client";
+import { apiRequest, BASE_URL } from './apiRequest';
 
 export type DiscountFormPayload = {
   name: string;
@@ -6,9 +6,8 @@ export type DiscountFormPayload = {
   email: string;
 };
 
-export async function postDiscountForm(data: DiscountFormPayload) {
-  return apiRequest<{ success: boolean }>("http://localhost:3333/sale/send", {
-    method: "POST",
+export const postDiscountForm = async (data: DiscountFormPayload) =>
+  await apiRequest<{ success: boolean }>(`${BASE_URL}/sale/send`, {
+    method: 'POST',
     body: JSON.stringify(data),
   });
-}

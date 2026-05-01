@@ -1,4 +1,4 @@
-import s from "./OrderSummary.module.scss";
+import s from './OrderSummary.module.scss';
 
 const OrderSummary = () => {
   const items = 4;

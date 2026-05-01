@@ -1,14 +1,14 @@
-import clsx from "clsx";
+import clsx from 'clsx';
 
-import type { ButtonProps } from "./type";
+import type { ButtonProps } from './type';
 
-import s from "./Button.module.scss";
+import s from './Button.module.scss';
 
 const Button = ({
   fullWidth = false,
-  appearance = "primary",
+  appearance = 'primary',
   ref,
-  type = "button",
+  type = 'button',
   className,
   isDisabled = false,
   children,
@@ -20,7 +20,7 @@ const Button = ({
       s[appearance],
       fullWidth && s.fullWidth,
       isDisabled && s.disabled,
-      className
+      className,
     )}
     ref={ref}
     type={type}

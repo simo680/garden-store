@@ -1,6 +1,6 @@
-import Button from "../ui/Button/Button";
+import Button from '../ui/Button/Button';
 
-import s from "./Head.module.scss";
+import s from './Head.module.scss';
 
 const Head = () => {
   return (

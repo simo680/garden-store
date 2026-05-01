@@ -1,4 +1,4 @@
-import s from "./FooterCard.module.scss";
+import s from './FooterCard.module.scss';
 
 interface FooterCardProps {
   title: string;

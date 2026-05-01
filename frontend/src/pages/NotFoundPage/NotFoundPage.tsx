@@ -1,10 +1,10 @@
-import { useNavigate } from "react-router";
+import { useNavigate } from 'react-router';
 
-import Button from "../../components/ui/Button/Button";
+import Button from '../../components/ui/Button/Button';
 
-import NotFoundImage from "./images/404.png";
+import NotFoundImage from './images/404.png';
 
-import s from "./NotFoundPage.module.scss";
+import s from './NotFoundPage.module.scss';
 
 const NotFoundPage = () => {
   const navigate = useNavigate();
@@ -12,7 +12,7 @@ const NotFoundPage = () => {
   return (
     <div className={s.container}>
       <div className={s.image}>
-        <img src={NotFoundImage} alt="Not Found image" />
+        <img src={NotFoundImage} alt='Not Found image' />
       </div>
       <div className={s.text}>
         <h2 className={s.title}>Page Not Found</h2>
@@ -21,7 +21,7 @@ const NotFoundPage = () => {
           to the homepage.
         </p>
       </div>
-      <Button className={s.button} onClick={() => navigate("/")}>
+      <Button className={s.button} onClick={() => navigate('/')}>
         <a className={s.link}>Go home</a>
       </Button>
     </div>

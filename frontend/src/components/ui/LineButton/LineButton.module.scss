@@ -1,4 +1,4 @@
-@use "../../../styles/variables" as *;
+@use '../../../styles/variables' as *;
 
 .container {
   display: flex;
@@ -24,12 +24,10 @@
 
 .button {
   padding: 8px 16px;
-
-  border: 1px solid $border-primary;
-  border-radius: 8px;
   color: $text-muted;
   font-size: 16px;
-
-  cursor: pointer;
   white-space: nowrap;
+  border: 1px solid $border-primary;
+  border-radius: 8px;
+  cursor: pointer;
 }

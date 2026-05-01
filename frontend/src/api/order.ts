@@ -1,4 +1,4 @@
-import { apiRequest } from "./client";
+import { apiRequest, BASE_URL } from './apiRequest';
 
 export type OrderFormPayload = {
   name: string;
@@ -6,9 +6,8 @@ export type OrderFormPayload = {
   email: string;
 };
 
-export async function postOrder(data: OrderFormPayload) {
-  return apiRequest<{ success: boolean }>("http://localhost:3333/sale/send", {
-    method: "POST",
+export const postOrder = async (data: OrderFormPayload) =>
+  await apiRequest<{ success: boolean }>(`${BASE_URL}/sale/send`, {
+    method: 'POST',
     body: JSON.stringify(data),
   });
-}

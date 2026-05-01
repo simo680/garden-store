@@ -1,11 +1,12 @@
-// api/client.ts
-export async function apiRequest<T>(
+export const BASE_URL = 'http://localhost:3333/';
+
+export const apiRequest = async <T>(
   url: string,
-  options?: RequestInit
-): Promise<T> {
+  options?: RequestInit,
+): Promise<T> => {
   try {
     const response = await fetch(url, {
-      headers: { "Content-Type": "application/json" },
+      headers: { 'Content-Type': 'application/json' },
       ...options,
     });
 
@@ -16,6 +17,7 @@ export async function apiRequest<T>(
     return await response.json();
   } catch (error) {
     console.error(`Error in apiRequest (${url}):`, error);
+
     throw error;
   }
-}
+};

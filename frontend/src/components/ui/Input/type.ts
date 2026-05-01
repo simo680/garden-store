@@ -1,6 +1,6 @@
-import type React from "react";
+import type React from 'react';
 
 export type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
   label?: string;
-  appearance?: "primary" | "secondary";
+  appearance?: 'primary' | 'secondary';
 };

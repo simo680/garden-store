@@ -1,4 +1,4 @@
-@use "../../styles/variables" as *;
+@use '../../styles/variables' as *;
 
 .container {
   display: flex;
@@ -15,17 +15,14 @@
   flex-direction: column;
   gap: 16px;
   max-width: 664px;
+  padding: 16px;
 }
 
 .description {
-  font-weight: 500;
   color: $text-muted;
+  font-weight: 500;
 }
 
 .button {
   width: 209px;
-}
-
-.text {
-  padding: 16px;
 }

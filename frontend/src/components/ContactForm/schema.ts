@@ -1,4 +1,4 @@
-import * as yup from "yup";
+import * as yup from 'yup';
 
 const phoneRegExp = /^(?:\+7|8)?9(?:\d{9})$/;
 

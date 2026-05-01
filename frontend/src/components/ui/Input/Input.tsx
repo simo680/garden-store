@@ -1,9 +1,9 @@
-import React from "react";
-import clsx from "clsx";
+import React from 'react';
+import clsx from 'clsx';
 
-import type { InputProps } from "./type";
+import type { InputProps } from './type';
 
-import s from "./Input.module.scss";
+import s from './Input.module.scss';
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   (
@@ -13,12 +13,12 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       name,
       onChange,
       onBlur,
-      appearance = "primary",
+      appearance = 'primary',
       type,
       placeholder,
       ...props
     },
-    ref
+    ref,
   ) => {
     return (
       <>
@@ -35,7 +35,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         />
       </>
     );
-  }
+  },
 );
 
 export default Input;

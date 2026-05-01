@@ -1,7 +1,7 @@
-import type { LineButtonProps } from "./type";
+import type { LineButtonProps } from './type';
 
-import s from "./LineButton.module.scss";
-import { useNavigate } from "react-router";
+import s from './LineButton.module.scss';
+import { useNavigate } from 'react-router';
 
 const LineButton = ({ title, titleButton, path }: LineButtonProps) => {
   const navigate = useNavigate();

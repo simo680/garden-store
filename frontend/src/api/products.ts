@@ -1,23 +1,23 @@
-import { apiRequest } from "./client";
+import { apiRequest, BASE_URL } from './apiRequest';
 
 export type TProduct = {
   id: number;
   title: string;
   price: number;
+  /*
+   ** TODO: Поменять на discount_price, когда поменяю на бэке
+   */
   discont_price: number;
   description: string;
   image: string;
 };
 
-
-export async function getAllProducts() {
-  return apiRequest<TProduct[]>("http://localhost:3333/products/all", {
-    method: "GET",
+export const getAllProducts = async () =>
+  await apiRequest<TProduct[]>(`${BASE_URL}/products/all`, {
+    method: 'GET',
   });
-}
 
-export async function getProductById(id: number) {
-  return apiRequest<TProduct>(`http://localhost:3333/products/${id}`, {
-    method: "GET",
+export const getProductById = async (id: number) =>
+  await apiRequest<TProduct>(`${BASE_URL}/products/${id}`, {
+    method: 'GET',
   });
-}

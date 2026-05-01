@@ -1,4 +1,4 @@
-import PageWrapper from "../../components/PageWrapper/PageWrapper";
+import PageWrapper from '../../components/PageWrapper/PageWrapper';
 
 const ProductPage = () => {
   return <PageWrapper>ProductPage</PageWrapper>;
