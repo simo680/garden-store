@@ -3,18 +3,17 @@ import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { createBrowserRouter, RouterProvider } from 'react-router';
 
-import App from "./App.tsx";
-import HomePage from "./pages/HomePage/HomePage.tsx";
-import CategoriesPage from "./pages/CategoriesPage/CategoriesPage.tsx";
-import BasketPage from "./pages/BasketPage/BasketPage.tsx";
-import ProductPage from "./pages/ProductPage/ProductPage.tsx";
-import CategoryPage from "./pages/CategoryPage/CategoryPage.tsx";
-import ProductsPage from "./pages/ProductsPage/ProductsPage.tsx";
-import NotFoundPage from "./pages/NotFoundPage/NotFoundPage.tsx";
-import "./styles/index.scss";
-import { setupStore } from "./store/store.ts";
+import App from './App.tsx';
+import HomePage from './pages/HomePage/HomePage.tsx';
+import CategoriesPage from './pages/CategoriesPage/CategoriesPage.tsx';
+import BasketPage from './pages/BasketPage/BasketPage.tsx';
+import ProductPage from './pages/ProductPage/ProductPage.tsx';
+import { CategoryPage } from './pages/CategoryPage/CategoryPage.tsx';
+import ProductsPage from './pages/ProductsPage/ProductsPage.tsx';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage.tsx';
+import { setupStore } from './store/store.ts';
 
-export const API_URL = "http://localhost:3333";
+import './styles/index.scss';
 
 const store = setupStore();
 

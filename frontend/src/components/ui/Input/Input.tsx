@@ -5,37 +5,34 @@ import type { InputProps } from './type';
 
 import s from './Input.module.scss';
 
-const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  (
-    {
-      label,
-      className,
-      name,
-      onChange,
-      onBlur,
-      appearance = 'primary',
-      type,
-      placeholder,
-      ...props
-    },
-    ref,
-  ) => {
-    return (
-      <>
-        {label && <label htmlFor={name}>{label}</label>}
-        <input
-          className={clsx(s.input, s[appearance], className)}
-          name={name}
-          type={type}
-          placeholder={placeholder}
-          onChange={onChange}
-          onBlur={onBlur}
-          ref={ref}
-          {...props}
-        />
-      </>
-    );
-  },
-);
+const Input = React.forwardRef<HTMLInputElement, InputProps>((props, ref) => {
+  const {
+    label,
+    className,
+    name,
+    onChange,
+    onBlur,
+    appearance = 'primary',
+    type,
+    placeholder,
+    ...rest
+  } = props;
+
+  return (
+    <>
+      {label && <label htmlFor={name}>{label}</label>}
+      <input
+        className={clsx(s.input, s[appearance], className)}
+        name={name}
+        type={type}
+        placeholder={placeholder}
+        onChange={onChange}
+        onBlur={onBlur}
+        ref={ref}
+        {...rest}
+      />
+    </>
+  );
+});
 
 export default Input;

@@ -1,7 +1,5 @@
-import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import  categoriesSlice  from './reducers/categoriesSlice';
-
-
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import categoriesSlice from './reducers/categoriesSlice';
 
 const rootReducer = combineReducers({
   categories: categoriesSlice,
@@ -15,5 +13,4 @@ export const setupStore = () => {
 
 export type RootState = ReturnType<typeof rootReducer>;
 export type AppStore = ReturnType<typeof setupStore>;
-export type AppDispatch = AppStore["dispatch"];
-
+export type AppDispatch = AppStore['dispatch'];

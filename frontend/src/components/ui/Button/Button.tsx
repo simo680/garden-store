@@ -1,34 +1,38 @@
 import clsx from 'clsx';
 
-import type { ButtonProps } from './type';
+import type { ButtonProps } from './Button.props';
 
 import s from './Button.module.scss';
 
-const Button = ({
-  fullWidth = false,
-  appearance = 'primary',
-  ref,
-  type = 'button',
-  className,
-  isDisabled = false,
-  children,
-  ...props
-}: ButtonProps) => (
-  <button
-    className={clsx(
-      s.button,
-      s[appearance],
-      fullWidth && s.fullWidth,
-      isDisabled && s.disabled,
-      className,
-    )}
-    ref={ref}
-    type={type}
-    disabled={isDisabled}
-    {...props}
-  >
-    {children}
-  </button>
-);
+const Button = (props: ButtonProps) => {
+  const {
+    fullWidth = false,
+    appearance = 'primary',
+    ref,
+    type = 'button',
+    className,
+    isDisabled = false,
+    children,
+    ...rest
+  } = props;
+
+  return (
+    <button
+      className={clsx(
+        s.button,
+        s[appearance],
+        fullWidth && s.fullWidth,
+        isDisabled && s.disabled,
+        className,
+      )}
+      ref={ref}
+      type={type}
+      disabled={isDisabled}
+      {...rest}
+    >
+      {children}
+    </button>
+  );
+};
 
 export default Button;

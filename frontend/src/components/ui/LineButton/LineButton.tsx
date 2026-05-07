@@ -1,13 +1,16 @@
-import type { LineButtonProps } from './type';
-
-import s from './LineButton.module.scss';
 import { useNavigate } from 'react-router';
+import clsx from 'clsx';
 
-const LineButton = ({ title, titleButton, path }: LineButtonProps) => {
+import type { LineButtonProps } from './LineButton.props';
+import s from './LineButton.module.scss';
+
+export const LineButton = (props: LineButtonProps) => {
+  const { title, titleButton, path, className } = props;
+
   const navigate = useNavigate();
 
   return (
-    <div className={s.container}>
+    <div className={clsx(s.container, className)}>
       <h2 className={s.title}>{title}</h2>
       <div className={s.lineButton}>
         <div className={s.divider}></div>
@@ -18,5 +21,3 @@ const LineButton = ({ title, titleButton, path }: LineButtonProps) => {
     </div>
   );
 };
-
-export default LineButton;

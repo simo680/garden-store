@@ -1,11 +1,11 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 type TOrderSlice = {};
 
 export const initialState: TOrderSlice = {};
 
 export const orderSlice = createSlice({
-  name: "order",
+  name: 'order',
   initialState,
   reducers: {},
 });

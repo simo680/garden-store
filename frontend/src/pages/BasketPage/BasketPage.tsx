@@ -1,7 +1,7 @@
 import EmptyBasket from '../../components/EmptyBasket/EmptyBakset';
 import OrderDetails from '../../components/OrderDetails/OrderDetails';
 import PageWrapper from '../../components/PageWrapper/PageWrapper';
-import LineButton from '../../components/ui/LineButton/LineButton';
+import { LineButton } from '../../components/ui/LineButton/LineButton';
 
 const BasketPage = () => {
   return (
