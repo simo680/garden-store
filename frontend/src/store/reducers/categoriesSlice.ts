@@ -8,7 +8,7 @@ type TCategoriesSlice = {
   error: string | null;
 };
 
-const getAllCategories = createAsyncThunk<TCategory[], void>(
+export const getAllCategories = createAsyncThunk<TCategory[], void>(
   'categories/getAll',
   async (_, { rejectWithValue }) => {
     try {
