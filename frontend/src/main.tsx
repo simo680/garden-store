@@ -14,6 +14,8 @@ import NotFoundPage from "./pages/NotFoundPage/NotFoundPage.tsx";
 import "./styles/index.scss";
 import { setupStore } from "./store/store.ts";
 
+export const API_URL = "http://localhost:3333";
+
 const store = setupStore();
 
 const router = createBrowserRouter([

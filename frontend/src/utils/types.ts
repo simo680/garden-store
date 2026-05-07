@@ -18,7 +18,7 @@ export type TCartProduct = TProduct & {
 export type TCategory = {
   id: number;
   title: string;
-  img: string;
+  image: string;
   createdAt: string;
   updatedAt: string;
 };
