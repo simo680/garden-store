@@ -3,7 +3,6 @@ import { LineButton } from '../ui/LineButton/LineButton';
 
 import s from './Categories.module.scss';
 
-const Categories = () => {
   return (
     <div className={s.categories}>
       <LineButton
