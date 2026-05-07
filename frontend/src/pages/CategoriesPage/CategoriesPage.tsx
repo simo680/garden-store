@@ -4,7 +4,7 @@ import PageWrapper from '../../components/PageWrapper/PageWrapper';
 const CategoriesPage = () => {
   return (
     <PageWrapper title={'Categories'}>
-      <CategoriesList/>
+      <CategoriesList />
     </PageWrapper>
   );
 };

@@ -1,5 +1,3 @@
 export const CategoryPage = () => {
-  return (
-    <div>fdfdf</div>
-  );
+  return <div>fdfdf</div>;
 };

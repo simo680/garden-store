@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router';
 
-
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import { getAllCategories } from '../../store/reducers/categoriesSlice';
 
@@ -10,7 +9,6 @@ import type { CategoriesListProps } from './СategoriesList.props';
 import { BASE_URL } from '../../api/apiRequest';
 
 import s from './CategoriesList.module.scss';
-
 
 export const CategoriesList = (props: CategoriesListProps) => {
   const { limit } = props;
