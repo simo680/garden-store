@@ -72,4 +72,5 @@ export const cartSummarySelector = (state: RootState) => {
 };
 
 export const { addToCart, removeFromCart, clearCart } = cartSlice.actions;
+
 export default cartSlice.reducer;

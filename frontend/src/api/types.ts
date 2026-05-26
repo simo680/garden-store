@@ -1,7 +1,7 @@
 export type TProduct = {
   id: number;
   price: number;
-  discount_price: number;
+  discont_price: number;
   title: string;
   description: string;
   image: string;

@@ -1,0 +1,34 @@
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 34px;
+  height: 100%;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+}
+
+.value {
+  align-self: center;
+  text-align: center;
+  min-width: 20px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 15px;
+  cursor: pointer;
+}
+
+.increment {
+  border-left: 1px solid #dddddd;
+}
+
+.decrement {
+  border-right: 1px solid #dddddd;
+}

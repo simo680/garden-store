@@ -1,32 +1,32 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import type { TCategory, TProduct } from '../../api/types';
+import { createAsyncThunk, createSlice, type PayloadAction } from '@reduxjs/toolkit';
+import type { TProduct, TCategoryWithProducts } from '../../api/types';
 import { fetchAllProducts } from '../../api/products';
 import { getCategoryById } from '../../api/categories';
 
-const getByIdProducts = createAsyncThunk<TCategory, number>(
-  'categories/getById',
-  async (id, { rejectWithValue }) => {
-    try {
-      const responce = await getCategoryById(id);
+export const getByIdCategories = createAsyncThunk<
+  TCategoryWithProducts,
+  number
+>('categories/getById', async (id, { rejectWithValue }) => {
+  try {
+    const responce = await getCategoryById(id);
 
-      const category = responce;
+    const category = responce;
 
-      if (!category) {
-        return rejectWithValue('Category not found');
-      }
-
-      return category;
-    } catch (err) {
-      if (err instanceof Error) {
-        return rejectWithValue(err.message);
-      }
-
-      return rejectWithValue('An unknown error occurred');
+    if (!category) {
+      return rejectWithValue('Category not found');
     }
-  },
-);
 
-const getAllProducts = createAsyncThunk<TProduct[], void>(
+    return category;
+  } catch (err) {
+    if (err instanceof Error) {
+      return rejectWithValue(err.message);
+    }
+
+    return rejectWithValue('An unknown error occurred');
+  }
+});
+
+export const getAllProducts = createAsyncThunk<TProduct[], void>(
   'products/getAll',
   async (_, { rejectWithValue }) => {
     try {
@@ -49,7 +49,7 @@ export const getDiscountProducts = createAsyncThunk<TProduct[], void>(
       const response = await fetchAllProducts();
       return response.filter(
         (product) =>
-          product.discount_price && product.discount_price < product.price,
+          product.discont_price && product.discont_price < product.price,
       );
     } catch (err) {
       if (err instanceof Error) {
@@ -61,7 +61,7 @@ export const getDiscountProducts = createAsyncThunk<TProduct[], void>(
   },
 );
 
-const getByIdProducts = createAsyncThunk<TProduct, number>(
+export const getByIdProduct = createAsyncThunk<TProduct, number>(
   'products/getById',
   async (id, { rejectWithValue }) => {
     try {
@@ -89,6 +89,8 @@ type TProductsSlice = {
   discountProducts: TProduct[];
   categoryProducts: Record<number, TProduct[]>;
   selectedProduct: TProduct | null;
+  selectedCategory: TCategoryWithProducts | null;
+  productQuantities: Record<number, number>;
   isLoading: boolean;
   error: string | null;
 };
@@ -98,6 +100,8 @@ const initialState: TProductsSlice = {
   discountProducts: [],
   categoryProducts: {},
   selectedProduct: null,
+  selectedCategory: null,
+  productQuantities: {},
   isLoading: false,
   error: null,
 };
@@ -105,7 +109,15 @@ const initialState: TProductsSlice = {
 export const productsSlice = createSlice({
   name: 'products',
   initialState,
-  reducers: {},
+  reducers: {
+    setProductQuantity(
+      state,
+      action: PayloadAction<{ productId: number; quantity: number }>,
+    ) {
+      const normalized = Math.max(1, action.payload.quantity);
+      state.productQuantities[action.payload.productId] = normalized;
+    },
+  },
   extraReducers: (builder) => {
     // Get all products
     builder
@@ -138,7 +150,6 @@ export const productsSlice = createSlice({
       });
 
     // Get category products
-
     builder
       .addCase(getByIdCategories.pending, (state) => {
         state.isLoading = true;
@@ -146,27 +157,30 @@ export const productsSlice = createSlice({
       })
       .addCase(getByIdCategories.rejected, (state, action) => {
         state.isLoading = false;
-        state.error = action.error.message;
+        state.error = action.error.message || 'Unknown error';
       })
       .addCase(getByIdCategories.fulfilled, (state, action) => {
         state.isLoading = false;
+        state.selectedCategory = action.payload;
       });
 
     // Get product by ID
     builder
-      .addCase(getByIdProducts.pending, (state) => {
+      .addCase(getByIdProduct.pending, (state) => {
         state.isLoading = true;
         state.error = null;
       })
-      .addCase(getByIdProducts.rejected, (state, action) => {
+      .addCase(getByIdProduct.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.error.message || 'Unknown error';
       })
-      .addCase(getByIdProducts.fulfilled, (state, action) => {
+      .addCase(getByIdProduct.fulfilled, (state, action) => {
         state.isLoading = false;
         state.selectedProduct = action.payload;
       });
   },
 });
+
+export const { setProductQuantity } = productsSlice.actions;
 
 export default productsSlice.reducer;

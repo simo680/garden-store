@@ -9,7 +9,8 @@ import CategoriesPage from './pages/CategoriesPage/CategoriesPage.tsx';
 import BasketPage from './pages/BasketPage/BasketPage.tsx';
 import ProductPage from './pages/ProductPage/ProductPage.tsx';
 import { CategoryPage } from './pages/CategoryPage/CategoryPage.tsx';
-import ProductsPage from './pages/ProductsPage/ProductsPage.tsx';
+import { ProductsAllPage } from './pages/ProductsAllPage/ProductsAllPage.tsx';
+import { ProductsSalePage } from './pages/ProductsSalePage/ProductsSalePage.tsx';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage.tsx';
 import { setupStore } from './store/store.ts';
 
@@ -25,9 +26,9 @@ const router = createBrowserRouter([
       { path: '/', element: <HomePage /> },
       { path: 'categories', element: <CategoriesPage /> },
       { path: 'categories/:id', element: <CategoryPage /> },
-      { path: 'products', element: <ProductsPage /> },
+      { path: 'products', element: <ProductsAllPage /> },
       { path: 'products/:id', element: <ProductPage /> },
-      { path: 'sales', element: <ProductsPage /> },
+      { path: 'sales', element: <ProductsSalePage /> },
       { path: 'basket', element: <BasketPage /> },
       { path: '*', element: <NotFoundPage /> },
     ],
