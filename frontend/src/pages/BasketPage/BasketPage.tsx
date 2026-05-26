@@ -3,7 +3,7 @@ import OrderDetails from '../../components/OrderDetails/OrderDetails';
 import PageWrapper from '../../components/PageWrapper/PageWrapper';
 import { LineButton } from '../../components/ui/LineButton/LineButton';
 
-import s from './BasketPage.module.scss'
+import s from './BasketPage.module.scss';
 
 const BasketPage = () => {
   return (

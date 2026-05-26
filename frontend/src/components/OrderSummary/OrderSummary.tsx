@@ -1,9 +1,6 @@
 import s from './OrderSummary.module.scss';
 
 const OrderSummary = () => {
-  
-
-
   const items = 4;
   const total = 100;
 

@@ -5,8 +5,8 @@
 }
 
 .title {
-  font-size: 20px;
   font-weight: 700;
+  font-size: 20px;
 }
 
 .input {
@@ -14,15 +14,14 @@
   padding: 8px 16px;
   font-weight: 400;
   font-size: 16px;
-
-  -moz-appearance: textfield;
+  appearance: textfield;
   appearance: textfield;
 }
 
 .input::-webkit-outer-spin-button,
 .input::-webkit-inner-spin-button {
   margin: 0;
-  -webkit-appearance: none;
+  appearance: none;
 }
 
 .inputs {

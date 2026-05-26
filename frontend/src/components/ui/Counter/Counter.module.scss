@@ -10,17 +10,16 @@
 
 .value {
   align-self: center;
-  text-align: center;
   min-width: 20px;
   font-weight: 600;
   font-size: 20px;
+  text-align: center;
 }
 
 .button {
   display: flex;
   justify-content: center;
   align-items: center;
-
   padding: 0 15px;
   cursor: pointer;
 }

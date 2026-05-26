@@ -1,4 +1,8 @@
-import { createAsyncThunk, createSlice, type PayloadAction } from '@reduxjs/toolkit';
+import {
+  createAsyncThunk,
+  createSlice,
+  type PayloadAction,
+} from '@reduxjs/toolkit';
 import type { TProduct, TCategoryWithProducts } from '../../api/types';
 import { fetchAllProducts } from '../../api/products';
 import { getCategoryById } from '../../api/categories';
